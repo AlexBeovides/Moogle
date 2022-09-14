@@ -1,0 +1,48 @@
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/bin/Debug/net6.0/MoogleEngine.deps.json
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/bin/Debug/net6.0/MoogleEngine.dll
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/bin/Debug/net6.0/ref/MoogleEngine.dll
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/bin/Debug/net6.0/MoogleEngine.pdb
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.csproj.AssemblyReference.cache
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.AssemblyInfoInputs.cache
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.AssemblyInfo.cs
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.csproj.CoreCompileInputs.cache
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.dll
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/ref/MoogleEngine.dll
+/home/alexsense1/Documents/Programming/Projects/Moogle!/moogle-2021-main/MoogleEngine/obj/Debug/net6.0/MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.deps.json
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.AssemblyReference.cache
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfoInputs.cache
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfo.cs
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.CoreCompileInputs.cache
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\refint\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\moogle-2021-main\MoogleEngine\obj\Debug\net6.0\ref\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.deps.json
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.AssemblyReference.cache
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfoInputs.cache
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfo.cs
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.CoreCompileInputs.cache
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\refint\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\Moogle-main\MoogleEngine\obj\Debug\net6.0\ref\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.deps.json
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\bin\Debug\net6.0\MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.AssemblyReference.cache
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfoInputs.cache
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.AssemblyInfo.cs
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.csproj.CoreCompileInputs.cache
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\refint\MoogleEngine.dll
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\MoogleEngine.pdb
+E:\Programming\Projects\C#\Moogle!\global crap\Moogle-main\MoogleEngine\obj\Debug\net6.0\ref\MoogleEngine.dll
