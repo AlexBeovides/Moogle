@@ -1,4 +1,4 @@
-# Moogle 2022
+# Moogle! 2022
 
 > Proyecto de Programación. Facultad de Matemática y Computación. Universidad de La Habana. Curso 2022.
 
@@ -10,24 +10,29 @@ Moogle! es un motor de búsqueda que opera con un conjunto de documentos y una c
 
 # Clases y métodos
 
-Las clases utilizadas son:
+Las clases utilizadas y sus métodos son:
 - DataSet
     - Add
+
 - Document
     - DocumentToVector
     - ToVector
     - maxFreqFill
+
 - Operators
     - Apply
+
 - Query
     - QueryTfIdf
     - RankDocuments
     - CosineSimilarity
     - PurifyQuery
     - SearchSynonymous
+
 - Snippet
     - RetrieveSnippet
     - retrieveTxtSegment
+
 - TextUtils
     - getDocNames
     - isValidCharacter
@@ -35,14 +40,18 @@ Las clases utilizadas son:
     - normalize
     - EditDistance
     - buildString
+
 - Vector
     - IdfFill
     - ToVectorTfIdf
     - TfIdf
+
 - Moogle
     - init
     - QueryRequest
+
 - SearchItem
+
 - SearchResult
 
 # Flujo de Datos
