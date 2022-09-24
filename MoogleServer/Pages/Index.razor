@@ -1,28 +1,41 @@
 ﻿@page "/"
 
 <PageTitle>Moogle!</PageTitle>
+<div>
+
+
 
 <ul>
     <img id="moogleImage" src="moogle.png" alt="🔍 Moogle!">
 </ul>
 
-<div id="searchBox" style="display:inline-flex;">
+<div id="container2">
 
-    <input class="search" @bind="query" placeholder="Introduzca su búsqueda" @onkeyup="Press">
-    <button type="default" class="btn-search"  @onclick="RunQuery" ><img src="/Search.jpg" align="left" width="32px" height="32px"></button>
+    <div id="searchBox" style="display:inline-flex;">
+
+        <input class="search" @bind="query" placeholder="Introduzca su búsqueda" @onkeyup="Press">
+        <button type="default" class="btn-search"  @onclick="RunQuery" ><img src="/Search.jpg" align="left" width="32px" height="32px"></button>
     
-</div>
- 
-@if (!string.IsNullOrEmpty(result.Suggestion)) {
-    <div class="suggestion">
-        <p>Se muestran resultados de <strong><a href="#">@result.Suggestion</a></strong></p>
     </div>
-}
 
-@if (result.Count == 0 && result.Suggestion != "") 
+    @if(!string.IsNullOrEmpty(query))
+    {
+        <p id="subtext"> Se encontraron @Query.ResultsAmount resultados (@Moogle.QueryTime.TotalSeconds)</p>
+    }
+ 
+    @if (!string.IsNullOrEmpty(result.Suggestion)) 
+    {
+        <p id=suggestion >Se muestran resultados de <strong><a href="#">@result.Suggestion</a></strong></p>
+    }
+
+</div>
+
+
+
+@if (result.Count == 0 && flag==true) 
 {
     <p>Lo sentimos, no encontramos resultados :(</p>
-    <img alt="no-result" src="no-result.jpg" width="250">
+    <img alt="no-result" src="no-result.png" width="250">
 }
 else 
 {
@@ -32,16 +45,15 @@ else
 
         @foreach (var item in result.Items()) 
         {
-            @* <li @onclick="() => { ShowDocument(item.Title, item.Path); }"> *@
-              
             setStart(0);
 
                 <li>
                     <div class="item">
 
                         <div class="item-head">
+
                             <span class="title">@item.Title</span>
-                            @* <span class="score">@item.Score</span> *@
+
                         </div>
 
                         <p class="snippet">... 
@@ -73,7 +85,7 @@ else
 @code {
     private string query = "";
     private SearchResult result = new SearchResult();
-
+    public bool flag=false;
     private int intervalStart=0;
 
     private void setStart(int pos) {
@@ -82,6 +94,7 @@ else
 
     private void RunQuery() {
         result = Moogle.QueryRequest(query);
+        flag=true;
     }
     private void Press(KeyboardEventArgs e)
     {
@@ -91,3 +104,5 @@ else
         }
     }
 }
+
+</div>
