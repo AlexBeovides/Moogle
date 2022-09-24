@@ -63,4 +63,23 @@ $N=$ cantidad total de documentos en el corpus.
 
 ${df_i}=$ cantidad de documentos donde aparece el termino i.
 
- 
+- ## Query
+
+Luego el usuario eventualmente introduce una query, la cual es procesada como un documento, con la unica diferencia de que se extraen los operadores en el caso de que hayan sido introducidos. En el caso de que la query posea una palabra que no aparezca en el corpus, analizamos la posibilidad de que sea un sinonimo de alguna que si tengamos. Si no lo es, suponemos que el usuario se equivoco escribiendo, y procedemos a emplear el `algoritmo de Levenshtein` una metrica que mide la diferencia entre dos cadenas basado en el número mínimo de ediciones de un solo carácter que se requieren para cambiar una cadena por otra. Esta herramienta la utilizaremos entre el termino tipeado por el usuario y todas las palabras en nuestro corpus, quedandonos con la que tenga menor distancia de edicion, la sustituimos por el termino mal escrito, y modificamos el atributo `suggestion` de la clase `SearchResult`. Luego vectorizamos la query, y procedemos a hallar la similaridad entre la query y todos los documentos de nuestro corpus, mediante la siguiente formula denominada `cosine similarity`:
+
+$sim(d_j,q)=$
+$\dfrac{\sum_{i=1}^{n} w_{i,j} \times {w_{i,q}}} {{\sqrt{\sum_{i=1}^{n} {w^2_{i,j}} }} \times {\sqrt{\sum_{i=1}^{n} {w^2_{i,q}} }}}$
+
+$d_j=$ j-esimo documento expresado como vector n-dimensional
+
+$q=$ query expresada como vector n-dimensional
+
+$w_{i,j}=$ relevancia del termino i en el documento j
+
+Ya con las similaridades calculadas, tomaremos estas como puntuaciones, que usaremos para ordenar los documentos por orden de relevancia y luego mostrarselos al usuario. Esta puntuacion solo se vera modificada por los operadores, cuyas funcionalidades explicaremos en el proximo apartado.
+
+
+
+- ## Operadores
+
+- ## Snippet
