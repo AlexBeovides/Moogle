@@ -52,11 +52,8 @@ Las clases utilizadas son:
 
 El programa al levantar hace una llamada al metodo `init()`, donde se realiza un preprocesamiento de todos los documentos que estan en el corpus. Aqui se guarda el .json de los sinonimos en un diccionario, se guardan los documentos como strings en una lista, luego en el método `normalize()` cada uno de estos se separa por palabras y se guardan como una lista de strings. Posteriormente transformamos cada documento en un vector de `n` dimensiones, que vamos a almacenar en arreglos de tipo `double` y tamaño `n`, donde las coordenadas de cada dimension sera la relevancia que tiene cada palabra para el documento. La relevancia es calculada por la siguiente formula:
 
-$$
-
-{TF_{i,j}} 
-
-$$
+${TF_{i,j}} \times {IDF_i}
+={ \dfrac{freq_{i,j}}{maxfreq_j}} \times {\log_{10} (\dfrac{N}{df_i})}$
 
 ${freq_{i,j}}=$ cantidad de veces que aparece el termino i en el documento j.
 
