@@ -54,7 +54,7 @@ El programa al levantar hace una llamada al metodo `init()`, donde se realiza un
 
 $$
 
-TF_{i,j} \times IDF_i={ \dfrac{freq_{i,j}}{maxfreq_j}} \times {\log_{10} (\dfrac{N}{df_i})}
+{TF_{i,j}} \times {IDF_i}={ \dfrac{freq_{i,j}}{maxfreq_j}} \times {\log_{10} (\dfrac{N}{df_i})}
 
 $$
 
