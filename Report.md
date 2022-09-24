@@ -54,9 +54,7 @@ El programa al levantar hace una llamada al metodo `init()`, donde se realiza un
 
 $$
 
-{TF_{i,j}} \times {IDF_i}
-
-=
+{TF_{i,j}} 
 
 $$
 
