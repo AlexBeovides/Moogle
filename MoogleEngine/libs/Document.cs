@@ -37,8 +37,11 @@ namespace MoogleEngine
                 //agrega el vector que devuelve ToVector, a la lista VectorialModel
                 Vector vect=ToVector(Documents[i],false);
                 DataSet.VectorialModel.Add(vect);
-                Documents[i].maxFreq=maxFreqFill(vect);
 
+                Vector vect2=ToVector(Documents[i],false);
+                DataSet.VectorialModelClone.Add(vect2);
+                
+                Documents[i].maxFreq=maxFreqFill(vect);
             }
         }
 
@@ -48,7 +51,7 @@ namespace MoogleEngine
         public static Vector ToVector(Document Doc,bool isQuery)
         {
             //el arreglo de double Values va a almacenar para cada palabra del nuevo vector
-            //su importancia para el docucumento al que pertenece
+            //su importancia para el documento al que pertenece
             double[] Values=new double[DataSet.Dict.Count];
 
             //itera por el documento

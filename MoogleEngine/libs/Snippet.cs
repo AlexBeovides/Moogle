@@ -21,7 +21,6 @@ public class Snippet
     public static Snippet RetrieveSnippet(Document Doc,Query ActualQuery)      /// !!!!!!!!!!
     {
         Dictionary<int,int> queryTermsIndex=new Dictionary<int,int>();
-
         
         int snippetRange=Math.Min(60,Doc.content.Count);
         double bestSnippetValue=0;

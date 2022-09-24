@@ -33,12 +33,54 @@ namespace MoogleEngine
 
             return false;
         }
+
+        public static void checkOper(bool isQuery, List<char> oper,List<Tuple<string,int,int>> normalized,StringBuilder newword )
+        {
+            //aqui se podria usar un else if, pero puede dar confusion y m da pereza
+            if(isQuery==true && oper.Count>0)
+            {
+                int Importance=0;
+
+                for(int j=0 ; j<oper.Count ; j++)
+                {
+                    if(oper[j]=='*')
+                    {
+                        Importance++;
+                    }
+                    else if(oper[j]=='^')
+                    {
+                        Operators.OpMustBe.Add(newword.ToString()); 
+                    }
+                    else if(oper[j]=='!')
+                    {
+                        Operators.OpCantBe.Add(newword.ToString());
+                    }
+                    else if(oper[j]=='~' && normalized.Count>1)
+                    {
+                        int ArrSz=normalized.Count;
+                        Operators.OpNear.Add(Tuple.Create(normalized[ArrSz-1].Item1,normalized[ArrSz-2].Item1));
+                    }
+                }
+
+                if(Importance>0)
+                {
+                    Operators.OpImportance.Add(Tuple.Create(newword.ToString(),Importance));
+                    Importance=0;
+                }
+
+                oper.Clear();
+            }
+        }
+
         //funcion para normalizar los documentos (llevar las palabras a minusculas 
         //y remover los caracteres q no sean ni digitos ni letras) 
         public static List<Tuple<string,int,int>> normalize(string words,bool isQuery)
         {
             //en este array vamos a retornar el documento normalizado
             List<Tuple<string,int,int>> normalized=new List<Tuple<string,int,int>>();
+
+            //operators list
+            List<char> oper =new List<char>();
 
             // volviendo minusculas todas las letras
             words=words.ToLower();
@@ -80,7 +122,14 @@ namespace MoogleEngine
                             DataSet.Add(newword.ToString());
                         }
 
+                        checkOper(isQuery,oper,normalized,newword);
+
                         newword.Clear();
+                    }
+
+                    if(isQuery==true && (words[i]=='*' || words[i]=='~' || words[i]=='^' || words[i]=='!'))
+                    {
+                        oper.Add(words[i]);
                     }
                 } 
             }
@@ -99,6 +148,8 @@ namespace MoogleEngine
                 {
                     DataSet.Add(newword.ToString());
                 }
+
+                checkOper(isQuery,oper,normalized,newword);
                 
                 newword.Clear();
             }
@@ -166,6 +217,5 @@ namespace MoogleEngine
             return buildedString.ToString();
         }
     }
-        
 }
 

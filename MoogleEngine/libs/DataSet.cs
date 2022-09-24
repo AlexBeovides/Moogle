@@ -8,6 +8,8 @@ namespace MoogleEngine
         //VectorialModel es una lista de vectores, que contiene todos los documentos
         //convertidos a vector
         public static List<Vector> VectorialModel=new List<Vector>();
+
+        public static List<Vector> VectorialModelClone=new List<Vector>();
         
         //Dict es un diccionario, que almacena para cada palabra, la frecuencia de esta 
         //en el corpus

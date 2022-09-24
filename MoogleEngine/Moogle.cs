@@ -5,6 +5,8 @@ namespace MoogleEngine
     public static class Moogle
     {
         public static Dictionary<string,bool> termsInQuery=new Dictionary<string,bool>();
+
+        public static TimeSpan QueryTime= new TimeSpan();
        
         //inicializando las estructuras necesarias para la busqueda
         public static void init()
@@ -38,7 +40,7 @@ namespace MoogleEngine
             
             //calcula la frecuencia de cada palabra en el corpus
             Vector.IdfFill();
-
+       
             //transforma el valor de cada dimension de cada vector en su TfIdf
             Vector.ToVectorTfIdf();
         }
@@ -47,7 +49,7 @@ namespace MoogleEngine
         {
             termsInQuery.Clear();
         
-            DateTime start=DateTime.Now;////////////////////////////////////////////////
+            DateTime start=DateTime.Now;
 
             List<Tuple<string,int,int>> content=TextUtils.normalize(query,true);
 
@@ -72,11 +74,13 @@ namespace MoogleEngine
             Query.QueryTfIdf(QueryVect);
 
             Query ActualQuery=new Query(query,content,QueryVect);
-
+    
             List<SearchItem> items=Query.RankDocuments(ActualQuery);
             
-            DateTime end=DateTime.Now;///////////////////
-            System.Console.WriteLine(end-start);//////////////////////////
+            //tiempo de ejecucion
+            DateTime end=DateTime.Now;
+
+            QueryTime=end-start;
 
             return new SearchResult(items,suggestion);
         }

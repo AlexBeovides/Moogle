@@ -4,9 +4,6 @@ namespace MoogleEngine
     //al trabajo con las querys
     public class Query
     {
-        //limite de documentos a retornar en la respuesta
-        public static int answerLimit=Math.Min(20,Document.Documents.Count);
-
         public Query(string original,List<Tuple<string,int,int>> content,Vector QueryVector)
         {
             this.original=original;
@@ -16,6 +13,7 @@ namespace MoogleEngine
         public string original {get ; private set; }
         public List<Tuple<string,int,int>> content {get ; private set; }
         public Vector QueryVector {get ; private set; }
+        public static int ResultsAmount;
         public static void QueryTfIdf(Vector QueryVect)
         {
             double freq=Document.maxFreqFill(QueryVect);
@@ -38,23 +36,39 @@ namespace MoogleEngine
             }
 
             toRank.Sort();
+
+            for(int i=0 ; i<toRank.Count ; i++)
+            {
+                if(toRank[i].Item1==0)
+                {
+                    toRank.RemoveAt(i);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            Operators.Apply(toRank);
+
+            toRank.Sort();
             toRank.Reverse();
 
-            for(int i=0 ; i<Query.answerLimit ; i++)
+            for(int i=0 ; i<toRank.Count ; i++)
             {
                 if(toRank[i].Item1==0)   
                 {
                     break;
                 }
-                // Console.WriteLine(toRank[i].Item1);
-                
-
+        
                 Document DocToProcess=Document.Documents[toRank[i].Item2];
 
                 Snippet snippet=Snippet.RetrieveSnippet(DocToProcess,ActualQuery);
 
                 items.Add(new SearchItem(DocToProcess.title,snippet,toRank[i].Item1));
             }
+
+            ResultsAmount=items.Count;
 
             return items;
         }

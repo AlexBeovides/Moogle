@@ -75,8 +75,6 @@ namespace MoogleEngine
             //contiene el documento
             TermFrecuency=(DataSet.VectorialModel[DocumentIndex].values[TermIndex])/Document.Documents[DocumentIndex].maxFreq;
 
-            // System.Console.WriteLine(DocumentIndex+" "+TermIndex+" "+TermFrecuency*Idf[TermIndex]);
-
             return TermFrecuency*Idf[TermIndex];
         }
     }
